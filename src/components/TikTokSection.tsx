@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaTiktok } from 'react-icons/fa';
 
@@ -75,7 +76,7 @@ export default function TikTokSection() {
                         >
                             <div className="relative aspect-[9/16] w-full">
                                 {/* Video Thumbnail */}
-                                <img
+                                <Image
                                     src={video.thumbnailUrl}
                                     alt={video.title}
                                     className="w-full h-full object-cover"
