@@ -14,6 +14,7 @@ const WhatsAppButton = () => {
             <Image
                 src="/whatsapp.gif"
                 alt="WhatsApp"
+                unoptimized
                 width={44}
                 height={44}
             />
