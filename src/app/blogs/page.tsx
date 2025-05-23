@@ -1,8 +1,13 @@
-"use client";
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { blogPosts } from '../../data/blogPosts';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Ghalwa | Blogs",
+    description: "Ghalwa blog posts",
+};
 
 export default function BlogPage() {
     return (

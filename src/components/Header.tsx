@@ -8,7 +8,7 @@ const Header = () => {
 
     const navigationLinks = [
         { name: 'الرئيسية', href: '/' },
-        { name: 'منتجاتنا', href: '#products' },
+        { name: 'منتجاتنا', href: '/#products' },
         { name: 'عن غلوة', href: '#about' },
         { name: 'المدونة', href: '/blogs' },
         { name: 'تواصل معنا', href: '#contact' },

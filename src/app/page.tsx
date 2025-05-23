@@ -1,10 +1,10 @@
-import WhatsAppButton from '@/components/WhatsAppButton';
 import HomeBlogFeature from './blogs/HomeBlogFeature';
 import ProductsSection from '@/components/ProductsSection';
 import NewsletterSubscription from '@/components/NewsletterSubscription';
 import ProductBannerSlider from '@/components/ProductBannerSlider';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import InteractiveMap from '@/components/InteractiveMap';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function Home() {
   return (
@@ -13,17 +13,15 @@ export default function Home() {
 
       <ProductsSection limit={10} showViewAll={false} />
 
+      <YouTubeEmbed />
+
       <HomeBlogFeature />
 
       <InteractiveMap />
 
-      {/* <TikTokSection /> */}
-
       <TestimonialsSection />
 
       <NewsletterSubscription />
-
-      <WhatsAppButton />
 
     </main>
   );

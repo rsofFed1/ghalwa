@@ -1,4 +1,3 @@
-// Example homepage blog feature - place this component in your homepage
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';

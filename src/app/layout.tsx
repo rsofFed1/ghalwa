@@ -4,6 +4,8 @@ import { Tajawal } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import BackToTopButton from "@/components/BackToTopButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +20,7 @@ const geistMono = Geist_Mono({
 const tajawal = Tajawal({
   variable: "--font-tajawal",
   subsets: ["arabic"],
-  weight: ["400", "500", "700"],  // Available weights: 200, 300, 400, 500, 700, 800, 900
+  weight: ["400", "500", "700"], 
   display: 'swap',
 });
 
@@ -41,6 +43,8 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
+        <WhatsAppButton />
+        <BackToTopButton />
         <Footer />
       </body>
     </html>
