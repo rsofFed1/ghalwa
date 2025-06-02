@@ -1,27 +1,22 @@
-import HomeBlogFeature from './blogs/HomeBlogFeature';
-import ProductsSection from '@/components/ProductsSection';
-import NewsletterSubscription from '@/components/NewsletterSubscription';
-import ProductBannerSlider from '@/components/ProductBannerSlider';
-import TestimonialsSection from '@/components/TestimonialsSection';
+import HeroSection from '@/components/HeroSection';
+import BannerSection from '@/components/BannerSection';
+import FeaturesSection from '@/components/FeaturesSection';
 import InteractiveMap from '@/components/InteractiveMap';
-import YouTubeEmbed from '@/components/YouTubeEmbed';
+import ProductSection from '@/components/ProductSection';
 
 export default function Home() {
   return (
     <main>
-      <ProductBannerSlider />
 
-      <ProductsSection limit={10} showViewAll={false} />
+      <HeroSection />
 
-      <YouTubeEmbed />
+      <BannerSection />
 
-      <HomeBlogFeature />
+      <FeaturesSection />
+
+      <ProductSection />
 
       <InteractiveMap />
-
-      <TestimonialsSection />
-
-      <NewsletterSubscription />
 
     </main>
   );
