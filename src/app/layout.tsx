@@ -72,7 +72,6 @@ export default function RootLayout({
           />
           
         </noscript>
-        {/* End Meta Pixel Code */}
         <Header />
         <main className="min-h-screen">
           {children}
