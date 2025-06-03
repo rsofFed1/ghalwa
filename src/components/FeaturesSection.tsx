@@ -36,7 +36,7 @@ const FeaturesSection = () => {
                         initial={{ opacity: 0, x: -50 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                         transition={{ duration: 0.8 }}
-                        className="bg-white rounded-3xl shadow-2xl p-8 max-w-3xl mx-auto md:p-10 relative overflow-hidden"
+                        className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-4xl mx-auto md:p-10 relative overflow-hidden"
                     >
                         {/* Background decoration */}
                         <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-50 rounded-full opacity-50"></div>
@@ -74,7 +74,7 @@ const FeaturesSection = () => {
                         initial={{ opacity: 0, x: 50 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="bg-white rounded-3xl shadow-2xl p-8  max-w-3xl mx-auto md:p-10 relative overflow-hidden"
+                        className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-4xl mx-auto md:p-10 relative overflow-hidden"
                     >
                         {/* Background decoration */}
                         <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-50 rounded-full opacity-50"></div>
