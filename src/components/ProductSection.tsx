@@ -94,7 +94,7 @@ const ProductCard = ({ product, index }: { product: Product, index: number }) =>
         >
             {/* Description 1 */}
             <motion.h2
-                className={`text-3xl ${product.textColor} md:text-4xl font-bold font-tajawal text-center mb-3`}
+                className={`text-xl font-bold font-tajawal text-gray-700 text-center mb-3`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.1, duration: 0.6 }}
@@ -104,7 +104,7 @@ const ProductCard = ({ product, index }: { product: Product, index: number }) =>
 
             {/* Description 2 */}
             <motion.p
-                className="text-xl font-tajawal text-gray-700 text-center mb-3"
+                className="text-xl font-bold font-tajawal text-gray-700 text-center mb-3"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
