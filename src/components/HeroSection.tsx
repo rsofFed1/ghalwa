@@ -56,12 +56,12 @@ function HeroSection() {
 
                 {/* Images Side by Side - Arranged exactly like the reference */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto"
+                    className="max-w-2xl mx-auto"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.1, duration: 0.8 }}
                 >
-                    {/* Left Image */}
+                    {/* Left Image
                     <motion.div
                         className="relative aspect-square rounded-lg overflow-hidden shadow-md"
                         whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
@@ -73,9 +73,8 @@ function HeroSection() {
                             className="object-cover"
                             priority
                         />
-                    </motion.div>
+                    </motion.div> */}
 
-                    {/* Right Image */}
                     <motion.div
                         className="relative aspect-square rounded-lg overflow-hidden shadow-md"
                         whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
