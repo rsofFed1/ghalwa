@@ -66,11 +66,17 @@ export default function VideoSection() {
 
     const handleVideoLoaded = () => {
         setIsVideoLoaded(true);
+        if (videoRef.current) {
+            videoRef.current.play()
+                .catch(err => console.log("Initial autoplay attempt failed:", err));
+        }
     };
 
     const handleVideoEnded = () => {
         if (videoRef.current) {
             videoRef.current.currentTime = 0;
+            videoRef.current.play()
+                .catch(err => console.log("Replay after ended failed:", err));
         }
     };
 
@@ -104,15 +110,16 @@ export default function VideoSection() {
 
                     <video
                         ref={videoRef}
-                        className="h-screen object-contain"
+                        className="h-[90vh] object-contain"
                         controls={false}
                         playsInline
                         muted
-                        preload="metadata"
+                        autoPlay
+                        preload="auto"
                         onLoadedData={handleVideoLoaded}
                         onEnded={handleVideoEnded}
                         loop
-                        style={{ backgroundColor: 'rgb(245, 158, 11)' }}
+                        style={{ backgroundColor: 'rgb(246,130,34)' }}
                     >
                         {isVisible && (
                             <>
