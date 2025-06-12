@@ -2,6 +2,13 @@ import HeroSection from '@/components/HeroSection';
 import BannerSection from '@/components/BannerSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import ProductSection from '@/components/ProductSection';
+import { Metadata } from 'next';
+import VideoSection from '@/components/VideoSection';
+
+export const metadata: Metadata = {
+  title: "Ghalwa | Home",
+  description: "Ghalwa chai seller",
+};
 
 export default function Home() {
   return (
@@ -12,6 +19,8 @@ export default function Home() {
       <BannerSection />
 
       <FeaturesSection />
+      
+      <VideoSection />
 
       <ProductSection />
 
