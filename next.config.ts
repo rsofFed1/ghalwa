@@ -22,6 +22,19 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'x-robots-tag',
+            value: 'index, follow', 
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
