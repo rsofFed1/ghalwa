@@ -119,11 +119,11 @@ export default function VideoSection() {
                         onLoadedData={handleVideoLoaded}
                         onEnded={handleVideoEnded}
                         loop
-                        style={{ backgroundColor: 'rgb(246,130,34)' }}
+                        // style={{ backgroundColor: 'rgb(246,130,34)' }}
                     >
                         {isVisible && (
                             <>
-                                <source src="/ghalwa_video.mp4" type="video/mp4" />
+                                <source src="/ghalwa_optimized_video.mp4" type="video/mp4" />
                                 <p className="text-center p-4 bg-gray-100">
                                     متصفحك لا يدعم تشغيل الفيديو
                                 </p>
