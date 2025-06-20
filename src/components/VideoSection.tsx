@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 export default function VideoSection() {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -81,9 +80,9 @@ export default function VideoSection() {
     };
 
     return (
-        <section className="pb-16 bg-amber-50">
+        <section className="">
             <div className="container mx-auto px-4">
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -96,11 +95,11 @@ export default function VideoSection() {
                     <p className="text-lg text-gray-700 max-w-2xl mx-auto font-tajawal">
                         شاهد كيف يتم تحضير أفضل شاي بنكهات متميزة ومذاق لا يقاوم
                     </p>
-                </motion.div>
+                </motion.div> */}
 
                 <div
                     ref={containerRef}
-                    className="w-fit mx-auto relative rounded-xl overflow-hidden shadow-xl"
+                    className="w-fit mx-auto relative rounded-xl overflow-hidden"
                 >
                     {isVisible && !isVideoLoaded && (
                         <div className="absolute inset-0 flex items-center justify-center bg-amber-50 bg-opacity-80 z-10">

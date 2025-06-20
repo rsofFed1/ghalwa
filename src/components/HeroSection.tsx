@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import VideoSection from './VideoSection';
 
 function HeroSection() {
     return (
@@ -10,7 +10,7 @@ function HeroSection() {
             <div className="container mx-auto px-4 relative z-10">
                 {/* Text Content - Centered exactly as in reference */}
                 <motion.div
-                    className="w-full text-center mb-12"
+                    className="w-full text-center md:mb-12"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -43,7 +43,7 @@ function HeroSection() {
                     </motion.p>
 
                     <motion.p
-                        className="text-gray-700 text-lg font-medium font-tajawal mb-10"
+                        className="text-gray-700 text-lg font-medium font-tajawal md:mb-10"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.9, duration: 0.8 }}
@@ -61,32 +61,7 @@ function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.1, duration: 0.8 }}
                 >
-                    {/* Left Image
-                    <motion.div
-                        className="relative aspect-square rounded-lg overflow-hidden shadow-md"
-                        whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-                    >
-                        <Image
-                            src="/hero-image-1.jpg"
-                            alt="كرك غلوة"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                    </motion.div> */}
-
-                    <motion.div
-                        className="relative aspect-square rounded-lg overflow-hidden shadow-md"
-                        whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-                    >
-                        <Image
-                            src="/product_images/hero-image-2.webp"
-                            alt="نكهات كرك غلوة"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                    </motion.div>
+                    <VideoSection />
                 </motion.div>
             </div>
 

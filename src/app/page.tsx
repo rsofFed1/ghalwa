@@ -3,7 +3,6 @@ import BannerSection from '@/components/BannerSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import ProductSection from '@/components/ProductSection';
 import { Metadata } from 'next';
-import VideoSection from '@/components/VideoSection';
 
 export const metadata: Metadata = {
   title: "Ghalwa | Home",
@@ -20,7 +19,7 @@ export default function Home() {
 
       <FeaturesSection />
       
-      <VideoSection />
+      {/* <VideoSection /> */}
 
       <ProductSection />
 
