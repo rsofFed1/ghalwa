@@ -2,21 +2,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import VideoSection from './VideoSection';
+import FollowUs from './FollowUs';
 
 function HeroSection() {
     return (
-        <section className="pt-32 pb-16 bg-white overflow-hidden relative">
+        <section className="pt-[120px] pb-2 bg-white overflow-hidden relative">
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Text Content - Centered exactly as in reference */}
                 <motion.div
-                    className="w-full text-center md:mb-12"
+                    className="w-full text-center md:mb-4"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
                     <motion.h1
-                        className="text-3xl md:text-4xl font-extrabold font-tajawal text-gray-700 mb-6"
+                        className="text-3xl md:text-4xl font-semibold font-readex-pro text-[#fe9a00] mb-2"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
@@ -25,33 +26,23 @@ function HeroSection() {
                     </motion.h1>
 
                     <motion.p
-                        className="text-gray-700 text-2xl md:text-3xl font-semibold font-tajawal mb-6"
+                        className="text-[#cc0000] text-xl md:text-2xl font-medium  font-readex-pro mb-2"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
                     >
-                        علامة تجارية سعودية متخصصة في إنتاج أجود أنواع الشاي بنكهات متعددة.
+                        طعم يخليك ترجع له !
                     </motion.p>
 
-                    <motion.p
-                        className="text-gray-700 text-lg font-medium font-tajawal mb-6"
+                    <motion.div
+                        className="text-gray-700 text-lg font-readex-pro mb-2"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.7, duration: 0.8 }}
                     >
-                        جذورها بدأت من شغفها بالكرك
-                    </motion.p>
+                        <FollowUs />
+                    </motion.div>
 
-                    <motion.p
-                        className="text-gray-700 text-lg font-medium font-tajawal md:mb-10"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.9, duration: 0.8 }}
-                    >
-                        وامتدت إلى نكهات تمزج بين الأصالة والتجديد..
-                        <br />
-                        بطعم يخليك ترجع له!
-                    </motion.p>
                 </motion.div>
 
                 {/* Images Side by Side - Arranged exactly like the reference */}

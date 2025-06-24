@@ -89,10 +89,10 @@ export default function VideoSection() {
                     viewport={{ once: true }}
                     className="text-center mb-10"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold font-tajawal text-gray-700 mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold font-readex-pro text-gray-700 mb-4">
                         استمتع بتجربة شاي غلوة
                     </h2>
-                    <p className="text-lg text-gray-700 max-w-2xl mx-auto font-tajawal">
+                    <p className="text-lg text-gray-700 max-w-2xl mx-auto font-readex-pro">
                         شاهد كيف يتم تحضير أفضل شاي بنكهات متميزة ومذاق لا يقاوم
                     </p>
                 </motion.div> */}
@@ -109,7 +109,7 @@ export default function VideoSection() {
 
                     <video
                         ref={videoRef}
-                        className="h-[90vh] object-contain"
+                        className="h-[55vh] object-cover"
                         controls={false}
                         playsInline
                         muted

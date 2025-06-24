@@ -1,7 +1,7 @@
 'use client';
 
 import { Geist, Geist_Mono } from "next/font/google";
-import { Tajawal } from "next/font/google";
+import { Readex_Pro } from "next/font/google"; 
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,10 +21,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const tajawal = Tajawal({
-  variable: "--font-tajawal",
-  subsets: ["arabic"],
-  weight: ["400", "500", "700"],
+const readexPro = Readex_Pro({
+  variable: "--font-readex-pro",
+  subsets: ["arabic", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
   display: 'swap',
 });
 
@@ -45,11 +45,11 @@ export default function RootLayout({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${tajawal.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${readexPro.variable} antialiased`}
       >
         <AnalyticsScripts />
         <Header />
-        <main className="min-h-screen">
+        <main className="min-h-screen overflow-hidden">
           {children}
         </main>
         <Footer />

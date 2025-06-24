@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import { motion, useInView } from 'motion/react';
+import { motion, useInView } from 'framer-motion';
 
 type Product = {
     id: number;
@@ -59,15 +59,19 @@ function ProductSection() {
     return (
         <section
             ref={sectionRef}
-            className="py-24 bg-white overflow-hidden"
+            className="bg-white overflow-hidden py-16"
         >
             <div className="container mx-auto px-4">
-                {/* Product Cards */}
+                {/* Product Cards - Alternating animation directions */}
                 <div className="container mx-auto px-4">
-                    {/* Product Cards - Stacked one below the other */}
-                    <div className="max-w-4xl mx-auto space-y-16">
+                    <div className="max-w-4xl mx-auto space-y-20">
                         {products.map((product, index) => (
-                            <ProductCard key={product.id} product={product} index={index} />
+                            <ProductCard
+                                key={product.id}
+                                product={product}
+                                index={index}
+                                direction={index % 2 === 0 ? "right" : "left"}
+                            />
                         ))}
                     </div>
                 </div>
@@ -76,68 +80,84 @@ function ProductSection() {
     );
 }
 
-const ProductCard = ({ product, index }: { product: Product, index: number }) => {
+const ProductCard = ({
+    product,
+    index,
+    direction
+}: {
+    product: Product,
+    index: number,
+    direction: "left" | "right"
+}) => {
     const productRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(productRef, {
-        once: true,  
-        amount: 0.1, 
-        margin: "0px 0px -100px 0px" 
+        once: true,
+        amount: 0.1,
+        margin: "0px 0px -100px 0px"
     });
+
+    // Determine animation direction based on the direction prop
+    const initialX = direction === "right" ? 100 : -100;
 
     return (
         <motion.div
             ref={productRef}
-            className="flex flex-col items-center"
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.7 }}
+            className={`flex flex-col items-center ${direction === 'right' ? 'lg:items-end' : 'lg:items-start'}`}
+            initial={{ opacity: 0, x: initialX }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: initialX }}
+            transition={{ duration: 0.8 }}
         >
-            {/* Description 1 */}
-            <motion.h2
-                className={`text-xl font-bold font-tajawal text-gray-700 text-center mb-3`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ delay: 0.1, duration: 0.6 }}
-            >
-                {product.description1}
-            </motion.h2>
+            <div className={`w-full lg:w-5/6 flex flex-col ${direction === 'right' ? 'lg:items-end' : 'lg:items-start'}`}>
+                {/* Text content with alignment based on direction */}
+                <div className={`text-center lg:text-${direction === 'right' ? 'right' : 'left'} mb-6`}>
+                    {/* Description 1 */}
+                    <motion.h2
+                        className={`text-xl font-bold font-readex-pro text-gray-700 mb-3`}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                        transition={{ delay: 0.1, duration: 0.6 }}
+                    >
+                        {product.description1}
+                    </motion.h2>
 
-            {/* Description 2 */}
-            <motion.p
-                className="text-xl font-bold font-tajawal text-gray-700 text-center mb-3"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-            >
-                {product.description2}
-            </motion.p>
+                    {/* Description 2 */}
+                    <motion.p
+                        className="text-xl font-bold font-readex-pro text-gray-700 mb-3"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                        transition={{ delay: 0.2, duration: 0.6 }}
+                    >
+                        {product.description2}
+                    </motion.p>
 
-            {/* Product Name with Colored Text */}
-            <motion.p
-                className={`text-lg font-tajawal font-medium ${product.textColor} text-center`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-            >
-                ({product.name})
-            </motion.p>
+                    {/* Product Name with Colored Text */}
+                    <motion.p
+                        className={`text-lg font-readex-pro font-medium ${product.textColor}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                        transition={{ delay: 0.3, duration: 0.6 }}
+                    >
+                        ({product.name})
+                    </motion.p>
+                </div>
 
-            {/* Product Image */}
-            <motion.div
-                className="relative w-full max-w-md aspect-square"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-                transition={{ delay: 0.4, duration: 0.7 }}
-                whileHover={{ scale: 1.03 }}
-            >
-                <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-contain"
-                    priority={index === 0}
-                />
-            </motion.div>
+                {/* Product Image */}
+                <motion.div
+                    className="relative w-full max-w-md aspect-square mx-auto"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+                    transition={{ delay: 0.4, duration: 0.7 }}
+                    whileHover={{ scale: 1.03 }}
+                >
+                    <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-contain"
+                        priority={index === 0}
+                    />
+                </motion.div>
+            </div>
         </motion.div>
     );
 };

@@ -55,7 +55,7 @@ const Header = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, ease:"easeIn" }}
                             >
-                                <h2 className="text-center text-[#e69138] font-semibold font-tajawal text-lg block tracking-wider">
+                                <h2 className="text-center text-[#e69138] font-semibold font-readex-pro text-lg block tracking-wider">
                                     فكَّه .. اغليــه .. واستمتع فيــه
                                 </h2>
                             </motion.div>
