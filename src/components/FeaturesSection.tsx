@@ -43,7 +43,7 @@ const FeaturesSection = () => {
                         <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-amber-50 rounded-full opacity-50"></div>
 
                         <div className="relative z-10">
-                            <h3 className="text-2xl font-bold text-[#e69138] mb-3 font-tajawal text-center">
+                            <h3 className="text-2xl font-bold text-[#e69138] mb-3 font-readex-pro text-center">
                                 يتميّز كرك غلوة
                             </h3>
                             <div className="w-32 h-1 bg-amber-500 mx-auto mb-6"></div>
@@ -62,7 +62,7 @@ const FeaturesSection = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="text-lg font-tajawal text-gray-700">{feature.text}</span>
+                                        <span className="text-lg font-readex-pro text-gray-700">{feature.text}</span>
                                     </motion.li>
                                 ))}
                             </ul>
@@ -81,7 +81,7 @@ const FeaturesSection = () => {
                         <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-amber-50 rounded-full opacity-50"></div>
 
                         <div className="relative z-10">
-                            <h3 className="text-2xl font-bold text-[#e69138] mb-3 font-tajawal text-center">
+                            <h3 className="text-2xl font-bold text-[#e69138] mb-3 font-readex-pro text-center">
                                 قيَم كرك غلوة الغذائية
                             </h3>
                             <div className="w-32 h-1 bg-amber-500 mx-auto mb-6"></div>
@@ -100,7 +100,7 @@ const FeaturesSection = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="text-lg font-tajawal text-gray-700">{value.text}</span>
+                                        <span className="text-lg font-readex-pro text-gray-700">{value.text}</span>
                                     </motion.li>
                                 ))}
                             </ul>

@@ -8,21 +8,21 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
-        tajawal: ['var(--font-tajawal)'],
+        'readex-pro': ['var(--font-readex-pro)', 'sans-serif'],
       },
       typography: {
         DEFAULT: {
           css: {
             'h1, h2, h3': {
-              fontFamily: 'var(--font-tajawal)',
+              fontFamily: 'var(--font-readex-pro)',
               textAlign: 'right',
             },
             p: {
-              fontFamily: 'var(--font-tajawal)',
+              fontFamily: 'var(--font-readex-pro)',
               textAlign: 'right',
             },
             li: {
-              fontFamily: 'var(--font-tajawal)',
+              fontFamily: 'var(--font-readex-pro)',
               textAlign: 'right',
             },
             '.myth-container': {

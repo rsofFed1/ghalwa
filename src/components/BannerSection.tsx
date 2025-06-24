@@ -10,7 +10,7 @@ function BannerSection() {
     return (
         <section
             ref={sectionRef}
-            className="py-16 md:py-24 bg-zinc-50 overflow-hidden relative"
+            className="py-10 md:py-16 bg-zinc-50 overflow-hidden relative"
         >
             <div className="container mx-auto px-4">
                 {/* Text content with animation */}
@@ -21,31 +21,41 @@ function BannerSection() {
                     transition={{ duration: 0.7 }}
                 >
                     <motion.h2
-                        className="text-xl md:text-2xl lg:text-3xl font-tajawal font-bold text-gray-700 mb-5 leading-relaxed"
+                        className="text-2xl md:text-3xl lg:text-4xl text-[#fe9a00] font-readex-pro font-semibold mb-1 leading-relaxed"
                         initial={{ opacity: 0 }}
                         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
                     >
-                        مشروب كرك مركَّز ، مُحضَّر من أجود أنواع الشاي والبهارات الهندية الأصيلة
+                        ذوَّاق ؟
                     </motion.h2>
-
                     <motion.p
-                        className="text-lg md:text-xl text-gray-700 font-tajawal"
+                        className="text-sm md:text-md lg:text-xl font-readex-pro text-[#cc0000] mb-6 leading-relaxed"
                         initial={{ opacity: 0 }}
                         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
                     >
-                        بخليط متوازن ولذَّة ثابتة
+                        جرب مشروب الكرك الأصلي ،
                     </motion.p>
+                    <motion.h2
+                        className="text-xl md:text-2xl lg:text-3xl font-readex-pro text-gray-700 mb-5 leading-relaxed"
+                        initial={{ opacity: 0 }}
+                        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                        transition={{ delay: 0.7, duration: 0.8 }}
+                    >
+                        <span className="text-[#fe9a00]"> مذاق غلوة..</span>
+                        <span className="text-[#cc0000]"> نتيجة توليفة نراهن عليها، بطعم متوازن ومكونات مختارة بعناية تُعبر عن جوهر النكهة. تأتيك</span>
+                        <span className="text-[#fe9a00]"> غلوة</span>
+                        <span className="text-[#cc0000]"> بجودة نضع عليها ثقتنا .</span>
+                    </motion.h2>
                 </motion.div>
 
                 {/* Image with animation */}
                 <motion.div
                     className="relative rounded-lg overflow-hidden max-w-5xl mx-auto"
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 40,scale: 1.1 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                     transition={{ delay: 0.7, duration: 0.8 }}
-                    whileHover={{ scale: 1.01 }}
+                    whileHover={{ scale: 1.2 }}
                 >
                     <Image
                         src="/product_images/banner2.webp"
