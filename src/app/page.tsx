@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <HeroSection />
+      {/* <HeroSection />
 
       <BannerSection />
 
@@ -21,11 +21,10 @@ export default function Home() {
 
       <FeaturedProduct />
 
-      {/* <FeaturesSection /> */}
-
-      {/* <VideoSection /> */}
-
-      <ProductSection />
+      <ProductSection /> */}
     </main>
   );
 }
+
+{/* <FeaturesSection /> */}
+{/* <VideoSection /> */}
